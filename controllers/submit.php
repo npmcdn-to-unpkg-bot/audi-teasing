@@ -11,7 +11,7 @@
 		$_SESSION['sends'] = 2;
 		$x = $_SESSION['sends'];
 	}
-	if ($x > 120){
+	if ($x > 20){
 		
 		$_SESSION['SenMail'] = false;
 		die('Vous ne pouvez plus envoyer des messages');

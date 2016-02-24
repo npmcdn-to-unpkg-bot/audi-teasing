@@ -1,6 +1,6 @@
 <?php
 
-$acc="";
+	$acc="";
 	
 	if ($acc=='ftp') {
 		//DB configuration Constants

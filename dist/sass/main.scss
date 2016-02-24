@@ -1,0 +1,495 @@
+//=================================================//
+//AUDI TEASING TUNISIE 
+//POWRED BY : ACCESS TO EBUSINESS (www.access.tn)
+//DEVELOPER AND INTEGRATOR BY MED ZIED BOUHEJBA
+//================================================//
+
+//VARS
+$red         : #e21739;
+$noir 		 : #231f20;
+$audi-normal : 'audi-normal';
+$audi-bold   : 'audi-bold';
+$audi        : 'audi';
+$ubuntu		 : 'Ubuntu', sans-serif;
+
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,700);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,700);
+*{
+	margin:0;
+	padding:0;
+	font-family: 'Ubuntu', sans-serif;
+}
+@mixin trs($time, $anim) {
+	 transition: all $time $anim;
+    -moz-transition: all $time $anim;
+    -ms-transition: all $time $anim;
+    -o-transition: all $time $anim;
+    -webkit-transition: all $time $anim;
+}
+body {
+	overflow-x: hidden;
+}
+.map {
+  //min-height: 720px;
+}
+
+.btn {
+  margin: 30px auto;
+}
+
+#collapsed-menu {
+	padding-top: 20px;
+}
+.navbar-nav>li>a {
+    padding-top: 18px;
+    padding-bottom: 28px;
+    font-size: 16px;
+    font-family: $ubuntu;
+    color: $noir;
+    text-transform: uppercase;
+    &:hover, &:focus {
+    	background: transparent;
+    	color: $red;
+    }
+}
+.navbar-nav.navbar-right {
+	text-align: right;
+	img {
+		display: block;
+		padding-bottom: 20px;
+	}
+}
+//HEADER
+
+nav {
+	position      : fixed;
+	left          : 0;
+	top           : 0;
+	right         : 0;
+	background    : #fff;
+	border-bottom : 1px solid #ddd;
+	z-index       : 999;
+}
+@mixin clock(){
+	
+	font-family: 'Oswald', sans-serif;
+	font-weight: 700;
+	p {
+		text-align: center;
+		margin: 0 auto;
+	}
+ 	p.count{
+ 		span {
+			font-size: 25px;
+			color: $red;
+			margin-right: 20px;
+			font-family: 'Oswald', sans-serif;
+			&:last-child{
+				margin-right: 0;
+			}
+		}
+	}
+	p:nth-child(1){
+		span {
+			display       : inline-block;
+			width         : 70px;
+			height        : 70px;
+			margin-right  : -20px;
+			border-radius : 100%;
+			border        : 8px solid $red;
+			&:last-child{
+				margin-right: 0;
+			}
+		}
+	}
+	p:nth-child(3){
+		width: 200px;
+		margin: auto;
+		span {
+			display     : inline-block;
+			width       : 25%;
+			text-align  : center;
+			font-family : $ubuntu;
+		}
+	}
+}
+
+#section0 {
+	position: relative;
+	#clock {
+		position : absolute;
+		top      : 25%;
+		left     : 15%;
+		@include clock();
+	}
+
+}
+
+@mixin button(){
+	border              : 1px solid $red;
+	padding             : 17px 115px 17px 25px;
+	color               : #232323;
+	outline             : 0;
+	font-weight         : 700;
+	background          : url(../img/arrow.png) no-repeat #fff;
+	background-position : right 29px top 15px;
+	text-decoration     : none !important;
+    @include trs(0.5s, ease);
+    &:hover {
+    	 background          : url(../img/arrow-1.png) no-repeat $red;
+    	 background-position : right 29px top 15px;
+    	 color               : #fff;
+    }
+}
+#section1 {
+	position: relative;
+}
+#scene {
+	position: absolute;
+	top: 0; left: 0; right: 0; bottom: 0;
+	z-index: -1;
+	list-style: none;
+	.layer{
+		position: absolute !important;
+		z-index: -1;
+		&:nth-child(1){
+			right: 0px;
+			top: -20px;
+		}
+		&:nth-child(8){
+			right: 0px;
+			bottom: -40px;
+		}
+		&:nth-child(2){
+			left: 20px;
+			bottom :-20px;
+		}
+		&:nth-child(3){
+			right: 20%;
+			bottom :-20px;
+		}
+		&:nth-child(4){
+			left: 20px;
+			top :-20px;
+		}
+		&:nth-child(5){
+			left: 30%;
+			top :30%;
+		}
+		&:nth-child(6){
+			left: 50%;
+			bottom :30%;
+		}
+		&:nth-child(7){
+			left: 60%;
+			bottom :45%;
+		}
+	}
+}
+#owl {
+	.item {
+		position: relative;
+		.btn-gallery {
+			@include button();
+			position: absolute;
+			right: 0;
+			top: 50%;
+			margin-top: -50px;
+		}
+		.btn-progres {
+			@include button();
+			position            : absolute;
+			left                : 0;
+			top                 : 50%;
+			margin-top          : -50px;
+			padding             : 17px 25px 17px  115px;
+			background          : url(../img/arrow-inv.png) no-repeat #fff;
+			background-position : left 29px top 15px;
+			&:hover {
+		    	 background          : url(../img/arrow-1-inv.png) no-repeat $red;
+		    	 background-position : left 29px top 15px;
+		    }
+		}
+	}
+	padding-bottom: 30px;
+	p>img {
+		max-width: 95%;
+	}
+	text-align: center;
+	h2 {
+		font-family    : $ubuntu;
+		font-size      : 35px;
+		text-transform : capitalize;
+		color          : $red;
+		font-weight    : bold;
+	}
+	h3 {
+		font-family: $ubuntu;
+		font-size: 40px;
+		font-weight: bold;
+		color: $red;
+		margin-bottom: -4px;
+	}
+	.event {
+		font-family : 'Oswald', sans-serif;
+		color       : #000;
+		padding     : 5px 20px;
+		background  : #fff;
+		position    : relative;
+		display     : inline-block;
+		font-size   : 16px;
+		margin-top  : 20px;
+		&:after {
+			position      : absolute;
+			content       : "";
+			border-bottom : 3px solid $red;
+			top           : 15px;
+			left          : -35px;
+			right         : -35px;
+			z-index       : -1;
+		}
+	}
+	#clock-2 {
+		@include clock();
+		margin-bottom: 25px;
+	}
+	form {
+		.input {
+			margin-top    : 25px;
+			font-size     : 17px;
+			border        : 0;
+			border-bottom : 1px solid $red;
+			position      : relative;
+			outline       : none;
+			width         : 420px;
+			display       : inline-block;
+			margin-right  : 20px;
+			max-width     : 80%;
+			input, input:hover, input:focus {
+				border: 0;
+				outline: none;
+				display: block;
+				padding: 16px 25px;
+				width: 100%;
+			}
+			&:after {
+				content     : '';
+				position    : absolute;
+				left        : 0;
+				bottom      : 0;
+				top         : 70%;
+				border-left : 1px solid $red;
+				display     : block;
+			}
+			&:before {
+				content: '';
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				top: 70%;
+				border-left: 1px solid $red;
+				display: block;
+			}
+		}
+		button {
+			@include button();
+		}
+		
+	}
+	.gallery {
+		a{	
+			display  : block;
+			float    : left;
+			padding  : 2px;
+			width    : 20%;
+			position : relative;
+			display  : inline-block;
+			height   : 230px;
+			overflow : hidden;
+			@include trs(0.4s, ease);
+			&.big{
+				width: 40%;
+			}
+			&:hover:after, &:hover:before{
+				opacity:1;
+			}
+			&:before {
+				@include trs(0.4s, ease);
+				content     : '';
+				position    : absolute;
+				background  : url(../img/plus.png) no-repeat;
+				width       : 50px;
+				height      : 50px;
+				top         : 50%;
+				left        : 50%;
+				margin-top  : -25px;
+				margin-left : -25px;
+				display     : block;
+				z-index     : 50;
+				opacity     : 0;
+			}
+			&.video:before{
+				background  : url(../img/play.png) no-repeat;
+				width       : 80px;
+				height      : 80px;
+				margin-top  : -40px;
+				margin-left : -40px;
+			}
+			&:after {
+				@include trs(0.4s, ease);
+				content    : "";
+				position   : absolute;
+				display    : block;
+				opacity    : 0;
+				left       : 2px; right: 0px; bottom: 0px; top:2px;
+				background : rgba(0,0,0,0.5);
+			}
+		}
+	}
+}
+
+
+#section2 {
+	margin-top: 35px;
+	text-align: center;
+	position: relative;
+	.text {
+		z-index: 99;
+		position: absolute;
+		left:20px;
+		right:20px;
+		top: 30px;
+		text-align: center;
+		h2 {
+			color: $red;
+			text-shadow: 1px 1px 0 rgba(97, 0, 0, 0.79);
+			font-size: 32px;
+		}
+		p {
+			font-weight: 400;
+			color: #fff;
+			font-size: 16px;
+		}
+	}
+	#owl-gallery {
+		.owl-item {
+			&:nth-child(1){
+				.loader {
+					position: absolute;
+					&:nth-child(1){
+						top: 42%;
+	    				left: 53%;
+					}
+					&:nth-child(2){
+						top: 51%;
+	    				left: 21%;
+					}
+					&:nth-child(3){
+					    top: 87%;
+	    				right: 38%;
+					}
+					&:nth-child(4){
+						top: 67%;
+	    				right: 32%;
+					}
+				}
+			}
+			&:nth-child(2){
+				.loader {
+					position: absolute;
+					&:nth-child(1){
+						top: 58%;
+    					left: 41%;
+					}
+					&:nth-child(2){
+						top: 52%;
+    					left: 63%;
+					}
+				}
+			}
+			position: relative;
+			img {
+				width: 100%;
+			}
+		}
+	}
+}
+.loader-inner.ball-scale-multiple {
+	position: relative;
+	&:after {
+	    content: '';
+	    width: 30px;
+	    height: 30px;
+	    border-radius: 100%;
+	    position: absolute;
+	    background: #e21739;
+	    right: -25px;
+	    top: 25px;
+	}
+}
+footer {
+	padding: 30px 0;
+	text-align: center;
+	p {
+		margin: 0;
+	}
+	a {
+		color: $red;
+	}
+}
+
+.blur {
+	-webkit-filter: blur(7px);
+	filter: blur(7px);
+	@include trs(0.3s, ease);
+}
+
+.modal-body ul {
+	padding-left: 35px;
+	padding-top: 25px;
+}
+
+@media screen and (max-width: 991px) {
+	#scene .layer:nth-child(5){
+		left: 1px;
+	}
+	#scene .layer:nth-child(7){
+		right: 1px;
+	}
+	#section2 .text{
+		margin-top: 85px;
+		position: initial;
+		p {
+			color: #000;
+		}
+	}
+	#owl .gallery a {
+		height: 180px;
+	}
+	.btn-gallery, .btn-progres {
+		display: none;
+	}
+	#collapsed-menu {
+		display: block;
+		.nav.navbar-nav {
+			display: none;
+		}
+		.nav.navbar-nav.navbar-right {
+			display: block;
+			text-align: center;
+			img{
+				display: initial;
+				max-width: 80%;
+			}
+		}
+	}
+}
+@media screen and (max-width: 768px) {
+	#owl form .input {
+		margin-bottom: 20px;
+		margin-right: 0;
+	}
+	#clock {
+		display: none;
+	}
+}

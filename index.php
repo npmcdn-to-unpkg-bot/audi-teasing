@@ -20,5 +20,8 @@
     //FOOTER
     require_once 'inc/footer.html';
 
+    //Modal
+    require_once 'inc/modal.php';
+
     //FOOTER - JS
     require_once 'inc/footer.php';

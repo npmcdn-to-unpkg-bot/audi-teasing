@@ -371,8 +371,10 @@ nav {
 			font-size: 16px;
 		}
 	}
+	//add points to image
 	#owl-gallery {
 		.owl-item {
+			//add points to image
 			&:nth-child(1){
 				.loader {
 					position: absolute;
@@ -395,6 +397,19 @@ nav {
 				}
 			}
 			&:nth-child(2){
+				.loader {
+					position: absolute;
+					&:nth-child(1){
+						top: 58%;
+    					left: 41%;
+					}
+					&:nth-child(2){
+						top: 52%;
+    					left: 63%;
+					}
+				}
+			}
+			&:nth-child(3){
 				.loader {
 					position: absolute;
 					&:nth-child(1){

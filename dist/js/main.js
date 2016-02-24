@@ -105,8 +105,9 @@ new WOW().init();
 /********************************/
 $('.modal-call, .loader').on('click', function (e) {
 	e.preventDefault();
+	var id = $(this).attr('data-id');
 	var modal = $(this).attr('data-modal');
-	$('#modal-1').modal('show');
+	$('#'+id).modal('show');
 	$('#section2 img').addClass('blur');
 });
 

@@ -46,7 +46,6 @@ body {
     font-size: 16px;
     font-family: $ubuntu;
     color: $noir;
-    text-transform: uppercase;
     &:hover, &:focus {
     	background: transparent;
     	color: $red;
@@ -203,7 +202,7 @@ nav {
 			top                 : 50%;
 			margin-top          : -50px;
 			padding             : 17px 25px 17px  115px;
-			background          : url(../img/arrow-inv.png) no-repeat #fff;
+			background          : url(../img/arrow-inv.png) no-repeat rgba(255,255,255,0.5);
 			background-position : left 29px top 15px;
 			&:hover {
 		    	 background          : url(../img/arrow-1-inv.png) no-repeat $red;

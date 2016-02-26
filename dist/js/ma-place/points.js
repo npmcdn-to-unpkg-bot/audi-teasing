@@ -11,10 +11,7 @@ var LocsA = [
         lat: 53.5586526,
         lon: 9.647645,
         title: 'Hamburg',
-        icon: 'dist/img/marker.png',
-        html : '</h3>Hamburg</h3>',
-        show_infowindow: true,
-        stopover: true
+       
     },
     {
         lat: 51.9224894,
@@ -27,7 +24,6 @@ var LocsA = [
         lat: 51.2603015,
         lon: 4.2176376,
         title: 'Antwerpen',
-        icon: 'dist/img/marker.png',
     },
     {
         lat: 36.8236219,

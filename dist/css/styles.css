@@ -110,21 +110,14 @@ button.close {
 }
 .modal-content {
     position: relative;
-    background-color: rgba(0, 0, 0, 0.53);
-    -webkit-background-clip: padding-box;
-    background-clip: padding-box;
-    border: 1px solid #999;
-    border: 1px solid rgba(0,0,0,.2);
-    border-radius: 6px;
+    background-color: transparent;
     outline: 0;
-    -webkit-box-shadow: 0 3px 9px rgba(0,0,0,.5);
-    box-shadow: 0 3px 9px rgba(0,0,0,.5);
+    box-shadow: none;
     color: #fff;
-    border: 1px solid #e21739;
+    border: 0;
 }
 .modal-dialog {
-    width: 600px;
-    margin: 15% auto 30px auto;
+    margin: 5% auto 30px auto;
 }
 
 #form p {

@@ -18,7 +18,7 @@
 /********************************/
 $(document).ready(function() {
 	if($(window).width()>991){
-	/*	$('#fullpage').fullpage({
+		/*$('#fullpage').fullpage({
 			anchors: ['Map', 'Gallery', 'Options'],
 			navigation: false,
 			navigationPosition: 'right',
@@ -29,7 +29,6 @@ $(document).ready(function() {
 		});*/
 	}
 });
-
 /********************************/
 //COUNT DOWN
 /********************************/
@@ -103,12 +102,10 @@ new WOW().init();
 /********************************/
 //MODAL
 /********************************/
-$('.modal-call, .loader').on('click', function (e) {
+$('.big.video').on('click', function (e) {
 	e.preventDefault();
 	var id = $(this).attr('data-id');
-	var modal = $(this).attr('data-modal');
-	$('#'+id).modal('show');
-	$('#section2 img').addClass('blur');
+	$('#modal-'+id).modal('show');
 });
 
 $('.modal').on('hidden.bs.modal', function (e) {
@@ -152,3 +149,49 @@ $(document).ready(function(){
 		$('#loader').fadeOut();
 	});
 });
+
+/***********************************/
+//----LINK
+/***********************************/
+function juizScrollTo(element) {
+    $(element).click(function(e) {
+        e.preventDefault();
+        var goscroll = false;
+        var the_hash = $(this).attr("href");
+        var regex = new RegExp("\#(.*)", "gi");
+        var the_element = '';
+        var heightMenu = 95;
+
+        if (the_hash.match("\#(.+)")) {
+            the_hash = the_hash.replace(regex, "$1");
+
+            if ($("#" + the_hash).length > 0) {
+                the_element = "#" + the_hash;
+                goscroll = true;
+            }
+            else if ($("a[name=" + the_hash + "]").length > 0) {
+                the_element = "a[name=" + the_hash + "]";
+                goscroll = true;
+            }
+
+            if (goscroll) {
+                if (the_hash == '#home') {
+                    $('html, body').animate({
+                        scrollTop: 0
+                    }, 'slow');
+                }
+                else {
+                    $('html, body').animate({
+                        scrollTop: $(the_element).offset().top - heightMenu
+                    }, 'slow');
+                }
+
+                $('.navbar-nav li').removeClass('active');
+                $(this).parent().addClass('active');
+                return false;
+            }
+        }
+    });
+}
+;
+juizScrollTo('a[href^="#"]');

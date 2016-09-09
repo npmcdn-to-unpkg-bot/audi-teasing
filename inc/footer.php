@@ -42,7 +42,7 @@
     <script src="dist/js/bootstrap.min.js" type="text/javascript"></script>
 
     <!-- BG LOAD -->
-    <script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
 
     <!-- OWN JS -->
     <script src="dist/js/main.js"></script>
